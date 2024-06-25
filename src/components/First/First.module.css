@@ -6,7 +6,10 @@
 .main {
   height: 100vh;
   width: 100vw;
+  max-width: 1980px;
+  margin: auto;
   overflow: hidden;
+  border: 1px solid whitesmoke;
 }
 
 .wrapper {
@@ -17,19 +20,20 @@
 }
 
 .svg {
-  height: 30px;
-  margin: 50px;
-  margin-left: -150px;
+height: 50px;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+ margin: auto;
   overflow: hidden;
-  padding: 20px;
-}
+  display: grid;
+  grid-template-columns: 20% 70%;
+  place-items: center;
+  column-gap: 9%;
+  transform: translateY(100vh); /* Start from below the viewport */
+  opacity: 0; /* Start invisible */
+  animation: rise-up-text 1s forwards;
+ }
 
 .animation {
   display: flex;
@@ -44,8 +48,8 @@ strong {
 }
 
 .bigCircle {
-  height: clamp(100px, 25vw, 300px);
-  width: clamp(100px, 25vw, 300px);
+  height: clamp(80px, 10vw, 250px);
+  width: clamp(80px, 10vw, 250px);
   border-radius: 50%;
   border: 1px solid whitesmoke;
   position: relative;
@@ -81,19 +85,19 @@ strong {
 
 @keyframes rotateMid {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg) translateX(100%) rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(50%) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translateX(100%) rotate(-360deg);
   }
 }
 
 @keyframes rotateSmall {
   0% {
-    transform: translate(-50%, -50%) rotate(0deg) translateX(60px) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg) translateX(150%) rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(60px)
+    transform: translate(-50%, -50%) rotate(360deg) translateX(150%)
       rotate(-360deg);
   }
 }
@@ -102,8 +106,6 @@ strong {
   position: absolute;
   width: 100%;
   height: 100%;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,44 +114,63 @@ strong {
 
 .line {
   width: 2px;
-  height: 40vh;
-  margin: 0 2vw;
+  margin: 0 1.5vw;
   background-color: var(--strong-text);
-  transform: rotate(25deg);
+  
   z-index: -1;
+  transform: translateY(100vh) rotate(45deg); /* Start from below the viewport */
+  opacity: 0; /* Start invisible */
+ 
+  animation: rise-up 1s forwards;
+  animation-delay: calc(var(--i) * 0.1s); /* Staggered animation */
 }
-.line:nth-child(1){
-  height: 40vh;
+.line:nth-child(1) { height: 20%; --i: 1; }
+.line:nth-child(2) { height: 40%; --i: 3; }
+.line:nth-child(3) { height: 50%; --i: 5; }
+.line:nth-child(4) { height: 60%; --i: 7; }
+.line:nth-child(5) { height: 50%; --i: 6; }
+.line:nth-child(6) { height: 40%; --i: 4; }
+.line:nth-child(7) { height: 20%; --i: 2; }
+
+@keyframes rise-up {
+  to {
+    transform: translateY(0) rotate(15deg);
+     /* End at the original position */
+    opacity: 1; /* Fade in */
+  }
 }
-.line:nth-child(2){
-  height: 50vh;
-}
-.line:nth-child(3){
-  height: 60vh;
-}
-.line:nth-child(4){
-  height: 70vh;
-}
-.line:nth-child(5){
-  height: 80vh;
+@keyframes rise-up-text {
+  to {
+    transform: translateY(0);
+     /* End at the original position */
+    opacity: 1; /* Fade in */
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 950px) {
   .wrapper {
     grid-template-columns: 1fr;
   }
 
   .content {
-    align-items: center;
-    text-align: center;
+   grid-template-columns: 100%;
+   place-content: center;
   }
 
   .animation {
-    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .line {
     height: 20vh;
-    margin: 0 1vw;
   }
+  .midCircle{
+    height: 50%;
+    width: 50%;
+  }
+ 
 }
+
+
+
+

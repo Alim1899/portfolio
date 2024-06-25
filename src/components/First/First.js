@@ -14,7 +14,7 @@ const First = () => {
             <h2>
               I'm a Front-End <strong>Web-Developer</strong>
             </h2>
-            <h2>Based in Georgia, Tbilisi</h2>
+            <h2>Based in <strong>Georgia, Tbilisi</strong></h2>
           </div>
         </div>
         <div className={classes.animation}>
@@ -24,6 +24,8 @@ const First = () => {
             </div>
           </div>
           <div className={classes.lines}>
+            <div className={classes.line}></div>
+            <div className={classes.line}></div>
             <div className={classes.line}></div>
             <div className={classes.line}></div>
             <div className={classes.line}></div>
