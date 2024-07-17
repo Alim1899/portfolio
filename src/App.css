@@ -2,8 +2,14 @@
     --background-color:#060830;
     --text-color:#908B77;
     --strong-text:#FEF5D6;
+    --content-width:clamp(275px,98%,1900px);
 }
 body{
     background-color:var(--background-color);
 color: var(--text-color);
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    background-color: #201d0f;
 }

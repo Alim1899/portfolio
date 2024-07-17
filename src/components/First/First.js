@@ -9,7 +9,7 @@ const First = () => {
           <img src={aa} className={classes.svg} alt="aa" />
           <div className={classes.text}>
             <h2>
-              Hey, I'm <strong>Alim</strong>
+              Hey, I'm <strong>Alim Akhchanogli</strong>
             </h2>
             <h2>
               I'm a Front-End <strong>Web-Developer</strong>

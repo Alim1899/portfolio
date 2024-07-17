@@ -1,0 +1,33 @@
+.main {
+  color: var(--strong-text);
+  width: var(--content-width);
+  margin: auto;
+}
+.header{
+text-align: center;
+}
+
+.logo {
+  height: clamp(50px, 30vw, 200px);
+  margin: auto;
+}
+.skillset {
+    border: 1px solid var(--strong-text);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.skill {
+  display:grid;
+ padding-top: 10px;
+ padding-bottom: 20px;
+}
+.skill > h2 {
+    margin: auto;
+    font-size:clamp(1rem,3vw,1.5rem);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+@media screen and (max-width: 800px) {
+  .skillset {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
