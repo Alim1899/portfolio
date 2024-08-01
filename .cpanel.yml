@@ -1,7 +1,4 @@
 deployment:
   tasks:
-    - echo "Starting deployment"
-    - /opt/cpanel/ea-nodejs16/bin/npm install
-    - /opt/cpanel/ea-nodejs16/bin/npm run build
-    - rsync -a --exclude='.git' --exclude='.cpanel.yml' build/ /home/$USER/public_html
-    - echo "Deployment tasks completed"
+    - echo "Deploying React app to cPanel"
+    - /opt/cpanel/ea-nodejs16/bin/npm --version
