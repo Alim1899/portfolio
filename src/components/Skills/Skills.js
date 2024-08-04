@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import classes from './Skills.module.css'
 import js from '../../assets/skills/js.svg';
 import css from '../../assets/skills/css.svg';
@@ -14,7 +13,8 @@ import ai from '../../assets/skills/ai.svg'
 
 
 const Skills = () => {
-const [userName,setUserName] = useState("");
+
+
   return (
     <div className={classes.main}>
     <h2 className={classes.header}>My Skillset:</h2>   
