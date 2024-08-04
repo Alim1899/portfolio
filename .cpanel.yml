@@ -1,4 +1,0 @@
-deployment:
-  tasks:
-    - echo "Deploying React app to cPanel"
-    - /opt/cpanel/ea-nodejs16/bin/npm --version

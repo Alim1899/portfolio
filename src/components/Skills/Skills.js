@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './Skills.module.css'
 import js from '../../assets/skills/js.svg';
 import css from '../../assets/skills/css.svg';
@@ -13,13 +13,11 @@ import ps from '../../assets/skills/ps.svg'
 import ai from '../../assets/skills/ai.svg'
 
 
-
-
-
 const Skills = () => {
+const [userName,setUserName] = useState("");
   return (
     <div className={classes.main}>
-    <h2 className={classes.header}>My Skillet:</h2>   
+    <h2 className={classes.header}>My Skillset:</h2>   
     <div className={classes.skillset}>
         <div className={classes.skill}>
           <img className={classes.logo} src={html} alt='skill'></img>
