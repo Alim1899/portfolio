@@ -1,5 +1,5 @@
 .main {
-  height: 100vh;
+  height: 99vh;
   overflow: hidden;
   width: var(--content-width);
 border: 1px solid var(--strong-text);

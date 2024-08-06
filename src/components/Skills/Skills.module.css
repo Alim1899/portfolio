@@ -2,32 +2,42 @@
   color: var(--strong-text);
   width: var(--content-width);
   margin: auto;
+  border: 1px solid var(--strong-text);
+  display: grid;
+  grid-template-columns: 30% 70%;
 }
-.header{
-text-align: center;
+.header {
+  text-align: center;
 }
 
 .logo {
   height: clamp(50px, 30vw, 200px);
   margin: auto;
+  height: 150px;
+  width: 150px;
 }
 .skillset {
-    border: 1px solid var(--strong-text);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:repeat(3,1fr);
+  gap: 10px; 
+  place-items: center;
 }
 .skill {
-  display:grid;
- padding-top: 10px;
- padding-bottom: 20px;
+  display: grid;
+  margin: 10px;
+  
 }
 .skill > h2 {
-    margin: auto;
-    font-size:clamp(1rem,3vw,1.5rem);
-  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: auto;
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
-@media screen and (max-width: 800px) {
-  .skillset {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.aboutSkills{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header{
+font-family:'Courier New', Courier, monospace;
+  font-size: clamp(1rem,5vw,1.8rem)
 }
