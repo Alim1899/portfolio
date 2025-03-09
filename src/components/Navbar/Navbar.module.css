@@ -1,0 +1,25 @@
+.navbar {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.personal {
+}
+.navlinks {
+  margin-top: 50px;
+}
+.link {
+  display: flex;
+  align-items: center;
+}
+hr {
+  width: 30px;
+  height: 0.1px;
+  background: none;
+  border: 1px solid black;
+}
+
+.social > svg {
+  color: #749181;
+}
