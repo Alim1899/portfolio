@@ -1,25 +1,69 @@
 .navbar {
-  border: 1px solid red;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 45% 30% 25%;
 }
 .personal {
+  padding: 80px 0 0 50px;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
+.name,
+.occupation {
+  color: var(--white-text);
+}
+.occupation {
+  margin-top: 25px;
+}
+.description {
+  color: var(--dark-text);
+  margin-top: 25px;
+  width: 70%;
+}
+
+/* NAVLINKS */
 .navlinks {
-  margin-top: 50px;
+  margin: 20px 0 0 50px;
 }
+
 .link {
+  margin: 15px;
   display: flex;
   align-items: center;
+  background-color: unset;
+  color: var(--dark-text);
+  border: none;
+  outline: none;
+}
+.link:hover hr {
+  border: 1px solid var(--white-text);
+  width: 40px;
+}
+.link:hover {
+  font-size: 1rem;
+  color: var(--white-text);
 }
 hr {
   width: 30px;
   height: 0.1px;
+  margin-right: 5px;
   background: none;
-  border: 1px solid black;
+  border: 1px solid var(--dark-text);
+}
+.selected {
+  font-size: 1rem;
+  color: var(--white-text);
+}
+.selected > hr {
+  border: 1px solid var(--white-text);
+  width: 40px;
 }
 
+/* SOCIAL ICONS */
+.social {
+  padding: 50px;
+}
 .social > svg {
-  color: #749181;
+  color: var(--dark-text);
+  width: 50px;
+  height: 50px;
+  margin: 0 15px;
 }

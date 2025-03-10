@@ -1,4 +1,28 @@
+:root {
+  --background: #0e182c;
+  --white-text: #e2e8f0;
+  --dark-text: #748296;
+  --x: 50vw;
+  --y: 50vh;
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+
+.hover {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle at var(--x) var(--y),
+    #192744,
+    transparent 30vw
+  );
+  background-color: var(--background);
+  transition: background 1s ease-out;
 }
