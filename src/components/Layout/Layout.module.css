@@ -2,4 +2,5 @@
   display: grid;
   grid-template-columns: 45% 55%;
   height: 100dvh;
+  width: 100vw;
 }

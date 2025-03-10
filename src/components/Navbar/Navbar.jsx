@@ -3,10 +3,17 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import classes from "./Navbar.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const Navbar = () => {
   const [selected, setSelected] = useState("About");
+  useEffect(() => {
+    const handleHashChange = () => {
+      setSelected(window.location.hash.substring(1) || "");
+    };
 
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
   return (
     <div className={classes.navbar}>
       <div className={classes.personal}>
@@ -23,10 +30,12 @@ const Navbar = () => {
             className={`${classes.link} ${
               selected === item ? classes.selected : ""
             }`}
-            onClick={() => setSelected(item)}
+            onClick={() => {
+              window.location.hash = item;
+            }}
           >
             <hr />
-            {item}
+            <span>{item}</span>
           </button>
         ))}
       </div>

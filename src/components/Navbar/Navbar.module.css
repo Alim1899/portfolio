@@ -40,6 +40,7 @@
 .link:hover {
   font-size: 1rem;
   color: var(--white-text);
+  cursor: pointer;
 }
 hr {
   width: 30px;
