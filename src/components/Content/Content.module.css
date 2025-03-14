@@ -4,6 +4,7 @@
   margin-top: 10%;
   width: 90%;
   max-width: 800px;
+  overflow: auto;
 }
 /* ABOUT */
 .about,
@@ -28,6 +29,7 @@
 }
 .date {
   text-align: center;
+  font-size: clamp(0.6rem, 1vw, 2rem);
 }
 .header {
   color: var(--white-text);
@@ -47,6 +49,8 @@
 .langs {
   display: flex;
   margin: 1vh;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .lang {
   padding: 5px;
@@ -54,6 +58,25 @@
   color: #54d6d4;
   background-color: #193654;
   margin: 1vh;
+}
+
+/*  */
+.project {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  color: var(--dark-text);
+  text-decoration: none;
+  align-items: center;
+  font-size: clamp(0.6rem, 1.5vw, 1.3rem);
+}
+.project > div > p {
+  padding: 5px 0px 0 10px;
+}
+
+.image {
+  object-fit: cover;
+  width: 100%;
+  height: 150px;
 }
 ::-webkit-scrollbar {
   width: 2px; /* Width of the scrollbar */

@@ -24,7 +24,7 @@ const Navbar = () => {
         </h4>
       </div>
       <div className={classes.navlinks}>
-        {["About", "Experience", "Skillset", "Projects"].map((item) => (
+        {["About", "Experience", "Projects", "Skillset"].map((item) => (
           <button
             key={item}
             className={`${classes.link} ${
@@ -34,7 +34,7 @@ const Navbar = () => {
               window.location.hash = item;
             }}
           >
-            <hr />
+            <hr className={classes.line} />
             <span>{item}</span>
           </button>
         ))}
