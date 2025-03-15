@@ -4,6 +4,7 @@ import classes from "./Content.module.css";
 import Experience from "./Experience";
 import About from "./About";
 import Projects from "./Projects";
+import Skillset from "./Skillset";
 
 const Content = () => {
   const [hash, setHash] = useState(
@@ -22,7 +23,7 @@ const Content = () => {
       {hash === "About" && <About />}
       {hash === "Experience" && <Experience />}
       {hash === "Projects" && <Projects />}
-      {hash === "Skillset" && <p>This is the Skillset section.</p>}
+      {hash === "Skillset" && <Skillset />}
     </div>
   );
 };
