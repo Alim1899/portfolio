@@ -40,10 +40,15 @@ const Navbar = () => {
         ))}
       </div>
       <div className={classes.social}>
-        <GrGithub />
-        <FaLinkedin />
-        <FaInstagram />
-        <FaFacebook />
+        <a href="https://github.com/Alim1899" target="_blank">
+          <GrGithub />
+        </a>
+        <a href="https://www.instagram.com/a__alim/" target="_blank">
+          <FaInstagram />
+        </a>{" "}
+        <a href="https://www.facebook.com/Alim1899/" target="_blank">
+          <FaFacebook />
+        </a>
       </div>
     </div>
   );
