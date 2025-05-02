@@ -120,11 +120,6 @@ const Skillset = () => {
           description="Track code changes, collaborate on projects, and manage repositories."
         />
       </ul>
-      {/* <img src={netlify} alt="skill" className={classes.icon} />
-
-      <img src={cpanel} alt="skill" className={classes.icon} />
-      <img src={esri} alt="skill" className={classes.icon} />
-      <img src={github} alt="skill" className={classes.icon} /> */}
     </div>
   );
 };
